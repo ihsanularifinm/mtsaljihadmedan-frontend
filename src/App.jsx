@@ -11,6 +11,7 @@ import Berita from './pages/Berita';
 import DetailBerita from './pages/DetailBerita';
 import Galeri from './pages/Galeri';
 import Akademik from './pages/Akademik';
+import Pendaftaran from './pages/Pendaftaran';
 
 // Halaman Admin
 import Dasbor from './components/admin/Dasbor';
@@ -18,6 +19,7 @@ import KelolaProfil from './pages/admin/KelolaProfil';
 import KelolaGaleri from './pages/admin/KelolaGaleri';
 import KelolaAlbumDetail from './pages/admin/KelolaAlbumDetail';
 import KelolaAkademik from './pages/admin/KelolaAkademik';
+import LihatPendaftar from './pages/admin/LihatPendaftar';
 
 function App() {
 	return (
@@ -31,6 +33,7 @@ function App() {
 					<Route path="berita/:id" element={<DetailBerita />} />
 					<Route path="galeri" element={<Galeri />} />
 					<Route path="akademik" element={<Akademik />} />
+					<Route path="pendaftaran" element={<Pendaftaran />} />
 				</Route>
 
 				{/* Grup Rute Admin */}
@@ -40,6 +43,8 @@ function App() {
 					<Route path="galeri" element={<KelolaGaleri />} />
 					<Route path="galeri/:id" element={<KelolaAlbumDetail />} />
 					<Route path="akademik" element={<KelolaAkademik />} />
+					<Route path="/admin" element={<AdminLayout />}></Route>
+					<Route path="pendaftar" element={<LihatPendaftar />} />
 				</Route>
 			</Routes>
 		</Router>
