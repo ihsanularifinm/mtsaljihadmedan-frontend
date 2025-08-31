@@ -25,6 +25,11 @@ function Sidebar() {
 						</NavLink>
 					</li>
 					<li>
+						<NavLink to="/admin/akademik" className={navLinkClass}>
+							<span>Kelola Akademik</span>
+						</NavLink>
+					</li>
+					<li>
 						<NavLink to="/admin/berita" className={navLinkClass}>
 							<span>Kelola Berita</span>
 						</NavLink>

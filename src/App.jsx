@@ -10,12 +10,14 @@ import Profil from './pages/Profil';
 import Berita from './pages/Berita';
 import DetailBerita from './pages/DetailBerita';
 import Galeri from './pages/Galeri';
+import Akademik from './pages/Akademik';
 
 // Halaman Admin
 import Dasbor from './components/admin/Dasbor';
 import KelolaProfil from './pages/admin/KelolaProfil';
 import KelolaGaleri from './pages/admin/KelolaGaleri';
 import KelolaAlbumDetail from './pages/admin/KelolaAlbumDetail';
+import KelolaAkademik from './pages/admin/KelolaAkademik';
 
 function App() {
 	return (
@@ -28,6 +30,7 @@ function App() {
 					<Route path="berita" element={<Berita />} />
 					<Route path="berita/:id" element={<DetailBerita />} />
 					<Route path="galeri" element={<Galeri />} />
+					<Route path="akademik" element={<Akademik />} />
 				</Route>
 
 				{/* Grup Rute Admin */}
@@ -36,6 +39,7 @@ function App() {
 					<Route path="profil" element={<KelolaProfil />} />
 					<Route path="galeri" element={<KelolaGaleri />} />
 					<Route path="galeri/:id" element={<KelolaAlbumDetail />} />
+					<Route path="akademik" element={<KelolaAkademik />} />
 				</Route>
 			</Routes>
 		</Router>
