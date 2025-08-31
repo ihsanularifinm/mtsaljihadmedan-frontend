@@ -1,26 +1,37 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
+
+// Layouts
+import PublicLayout from './components/PublicLayout';
+import AdminLayout from './components/admin/AdminLayout';
+
+// Halaman Publik
 import Beranda from './pages/Beranda';
+import Profil from './pages/Profil';
 import Berita from './pages/Berita';
 import DetailBerita from './pages/DetailBerita';
-import Profil from './pages/Profil'; // 1. Impor halaman Profil
+
+// Halaman Admin
+import Dasbor from './components/admin/Dasbor';
+import KelolaProfil from './pages/admin/KelolaProfil';
 
 function App() {
 	return (
 		<Router>
-			<div className="flex flex-col min-h-screen">
-				<Header />
-				<main className="flex-grow">
-					<Routes>
-						<Route path="/" element={<Beranda />} />
-						<Route path="/berita" element={<Berita />} />
-						<Route path="/berita/:id" element={<DetailBerita />} />
-						<Route path="/profil" element={<Profil />} /> {/* 2. Daftarkan rute */}
-					</Routes>
-				</main>
-				<Footer />
-			</div>
+			<Routes>
+				{/* Grup Rute Publik */}
+				<Route path="/" element={<PublicLayout />}>
+					<Route index element={<Beranda />} />
+					<Route path="profil" element={<Profil />} />
+					<Route path="berita" element={<Berita />} />
+					<Route path="berita/:id" element={<DetailBerita />} />
+				</Route>
+
+				{/* Grup Rute Admin */}
+				<Route path="/admin" element={<AdminLayout />}>
+					<Route index element={<Dasbor />} />
+					<Route path="profil" element={<KelolaProfil />} />
+				</Route>
+			</Routes>
 		</Router>
 	);
 }
