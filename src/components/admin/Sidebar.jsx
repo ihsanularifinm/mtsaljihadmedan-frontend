@@ -1,6 +1,8 @@
 import { NavLink } from 'react-router-dom';
+import { useAuth } from '../../context/AuthContext';
 
 function Sidebar() {
+	const { logout } = useAuth();
 	// Fungsi untuk styling link yang aktif
 	const navLinkClass = ({ isActive }) => (isActive ? 'flex items-center p-2 text-gray-900 rounded-lg bg-blue-100 text-blue-700' : 'flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100');
 
@@ -50,9 +52,9 @@ function Sidebar() {
 						</NavLink>
 					</li>
 					<li className="pt-4 mt-4 border-t">
-						<a href="/login" className="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100">
+						<button onClick={logout} className="w-full flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100">
 							<span>Keluar</span>
-						</a>
+						</button>
 					</li>
 				</ul>
 			</nav>
