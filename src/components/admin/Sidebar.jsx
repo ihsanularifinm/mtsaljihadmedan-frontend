@@ -44,6 +44,11 @@ function Sidebar() {
 							<span>Pendaftar PPDB</span>
 						</NavLink>
 					</li>
+					<li>
+						<NavLink to="/admin/pesan" className={navLinkClass}>
+							<span>Lihat Pesan</span>
+						</NavLink>
+					</li>
 					<li className="pt-4 mt-4 border-t">
 						<a href="/login" className="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100">
 							<span>Keluar</span>
