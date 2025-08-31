@@ -22,6 +22,7 @@ import KelolaAlbumDetail from './pages/admin/KelolaAlbumDetail';
 import KelolaAkademik from './pages/admin/KelolaAkademik';
 import LihatPendaftar from './pages/admin/LihatPendaftar';
 import LihatPesan from './pages/admin/LihatPesan';
+import KelolaBerita from './pages/admin/KelolaBerita';
 
 function App() {
 	return (
@@ -49,6 +50,7 @@ function App() {
 					<Route path="/admin" element={<AdminLayout />}></Route>
 					<Route path="pendaftar" element={<LihatPendaftar />} />
 					<Route path="pesan" element={<LihatPesan />} />
+					<Route path="berita" element={<KelolaBerita />} />
 				</Route>
 			</Routes>
 		</Router>
