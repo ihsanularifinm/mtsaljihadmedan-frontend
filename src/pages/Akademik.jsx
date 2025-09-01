@@ -8,7 +8,7 @@ function Akademik() {
 
 	useEffect(() => {
 		const fetchData = async () => {
-			const { data } = await axios.get('http://localhost:5000/api/akademik');
+			const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/api/akademik`);
 			setData(data);
 			setLoading(false);
 		};

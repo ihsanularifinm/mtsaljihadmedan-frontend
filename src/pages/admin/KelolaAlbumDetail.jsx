@@ -10,7 +10,7 @@ function KelolaAlbumDetail() {
 	const [selectedFiles, setSelectedFiles] = useState(null);
 
 	const fetchData = async () => {
-		const response = await axios.get(`http://localhost:5000/api/galeri/album/${id}`);
+		const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/galeri/album/${id}`);
 		setAlbum(response.data.album);
 		setFotos(response.data.fotos);
 	};
@@ -30,13 +30,13 @@ function KelolaAlbumDetail() {
 		for (let i = 0; i < selectedFiles.length; i++) {
 			formData.append('foto', selectedFiles[i]);
 		}
-		await axios.post('http://localhost:5000/api/galeri/foto', formData);
+		await axios.post(`${import.meta.env.VITE_API_URL}/api/galeri/foto`, formData);
 		fetchData(); // Refresh daftar foto
 	};
 
 	const handleHapusFoto = async (idFoto) => {
 		if (window.confirm('Yakin ingin menghapus foto ini?')) {
-			await axios.delete(`http://localhost:5000/api/galeri/foto/${idFoto}`);
+			await axios.delete(`${import.meta.env.VITE_API_URL}/api/galeri/foto/${idFoto}`);
 			fetchData(); // Refresh daftar foto
 		}
 	};
@@ -65,7 +65,7 @@ function KelolaAlbumDetail() {
 			<div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
 				{fotos.map((foto) => (
 					<div key={foto._id} className="relative group">
-						<img src={`http://localhost:5000/uploads/${foto.nama_file}`} alt="Foto" className="w-full h-40 object-cover rounded-lg shadow-md" />
+						<img src={`${import.meta.env.VITE_API_URL}/uploads/${foto.nama_file}`} alt="Foto" className="w-full h-40 object-cover rounded-lg shadow-md" />
 						<button onClick={() => handleHapusFoto(foto._id)} className="absolute top-2 right-2 bg-red-600 text-white rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity">
 							Hapus
 						</button>

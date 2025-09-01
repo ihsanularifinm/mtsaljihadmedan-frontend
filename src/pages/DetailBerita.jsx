@@ -13,7 +13,7 @@ function DetailBerita() {
 		const fetchDetailBerita = async () => {
 			try {
 				// Panggil API untuk mengambil satu berita berdasarkan ID
-				const response = await axios.get(`http://localhost:5000/api/berita/${id}`);
+				const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/berita/${id}`);
 				setBerita(response.data);
 			} catch (err) {
 				setError('Gagal mengambil detail berita.');

@@ -16,7 +16,7 @@ function KelolaProfil() {
 	useEffect(() => {
 		const fetchProfil = async () => {
 			try {
-				const response = await axios.get('http://localhost:5000/api/profil');
+				const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/profil`);
 				setFormData(response.data); // Isi form dengan data dari database
 			} catch (error) {
 				console.error('Gagal mengambil data profil', error);
@@ -42,7 +42,7 @@ function KelolaProfil() {
 		setMessage('Menyimpan...');
 		try {
 			// Kirim data yang diubah ke API backend dengan metode PUT
-			await axios.put('http://localhost:5000/api/profil', formData);
+			await axios.put(`${import.meta.env.VITE_API_URL}/api/profil`, formData);
 			setMessage('Data profil berhasil diperbarui!');
 			// Hapus pesan setelah 3 detik
 			setTimeout(() => setMessage(''), 3000);

@@ -21,7 +21,7 @@ function Kontak() {
 		setMessage('Mengirim pesan...');
 		setError('');
 		try {
-			const response = await axios.post('http://localhost:5000/api/pesan', formData);
+			const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/pesan`, formData);
 			setMessage(response.data.message);
 			setFormData({ nama_lengkap: '', email: '', subjek: '', isi_pesan: '' });
 		} catch (err) {

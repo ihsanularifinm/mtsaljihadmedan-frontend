@@ -12,7 +12,7 @@ function KelolaAkademik() {
 
 	useEffect(() => {
 		const fetchAkademik = async () => {
-			const { data } = await axios.get('http://localhost:5000/api/akademik');
+			const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/api/akademik`);
 			if (data) setFormData(data);
 		};
 		fetchAkademik();
@@ -23,7 +23,7 @@ function KelolaAkademik() {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		setMessage('Menyimpan...');
-		await axios.put('http://localhost:5000/api/akademik', formData);
+		await axios.put(`${import.meta.env.VITE_API_URL}/api/akademik`, formData);
 		setMessage('Data akademik berhasil diperbarui!');
 		setTimeout(() => setMessage(''), 3000);
 	};

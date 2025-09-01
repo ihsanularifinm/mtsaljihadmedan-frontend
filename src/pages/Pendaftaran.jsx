@@ -32,7 +32,7 @@ function Pendaftaran() {
 
 		try {
 			// Kirim data form ke API backend
-			const response = await axios.post('http://localhost:5000/api/pendaftar', formData);
+			const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/pendaftar`, formData);
 
 			// Jika berhasil
 			setMessage(response.data.message); // Tampilkan pesan sukses dari API

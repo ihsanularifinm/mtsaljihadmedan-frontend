@@ -9,7 +9,7 @@ function KelolaBerita() {
 
 	const fetchBerita = async () => {
 		try {
-			const { data } = await axios.get('http://localhost:5000/api/berita');
+			const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/api/berita`);
 			setBeritaList(data);
 		} catch (error) {
 			console.error('Gagal mengambil data berita:', error);
@@ -25,7 +25,7 @@ function KelolaBerita() {
 	const handleDelete = async (id) => {
 		if (window.confirm('Apakah Anda yakin ingin menghapus berita ini?')) {
 			try {
-				await axios.delete(`http://localhost:5000/api/berita/${id}`);
+				await axios.delete(`${import.meta.env.VITE_API_URL}/api/berita/${id}`);
 				// Refresh data setelah berhasil menghapus
 				fetchBerita();
 			} catch (error) {

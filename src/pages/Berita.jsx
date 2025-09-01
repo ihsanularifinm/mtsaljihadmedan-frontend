@@ -12,7 +12,7 @@ function Berita() {
 		const fetchSemuaBerita = async () => {
 			try {
 				// Panggil API untuk mengambil SEMUA berita
-				const response = await axios.get('http://localhost:5000/api/berita');
+				const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/berita`);
 				setBeritaList(response.data);
 			} catch (err) {
 				setError('Gagal mengambil data berita.');

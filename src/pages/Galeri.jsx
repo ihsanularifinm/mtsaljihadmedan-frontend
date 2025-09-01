@@ -12,13 +12,13 @@ function Galeri() {
 		const fetchGaleri = async () => {
 			try {
 				// Ambil semua data album dan foto sekaligus
-				const resAlbums = await axios.get('http://localhost:5000/api/galeri/album');
+				const resAlbums = await axios.get(`${import.meta.env.VITE_API_URL}/api/galeri/album`);
 
 				// Ambil semua foto (kita akan filter di frontend)
 				// Di aplikasi besar, ini sebaiknya dilakukan dengan satu panggilan API
 				const allFotos = [];
 				for (const album of resAlbums.data) {
-					const resFotos = await axios.get(`http://localhost:5000/api/galeri/album/${album._id}`);
+					const resFotos = await axios.get(`${import.meta.env.VITE_API_URL}/api/galeri/album/${album._id}`);
 					allFotos.push(...resFotos.data.fotos);
 				}
 
@@ -70,8 +70,8 @@ function Galeri() {
 										.filter((foto) => foto.id_album === album._id)
 										.map((foto) => (
 											<div key={foto._id} className="bg-white rounded-lg shadow-md overflow-hidden group">
-												<a href={`http://localhost:5000/uploads/${foto.nama_file}`} target="_blank" rel="noopener noreferrer">
-													<img src={`http://localhost:5000/uploads/${foto.nama_file}`} alt="Foto di album" className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" />
+												<a href={`${import.meta.env.VITE_API_URL}/uploads/${foto.nama_file}`} target="_blank" rel="noopener noreferrer">
+													<img src={`${import.meta.env.VITE_API_URL}/uploads/${foto.nama_file}`} alt="Foto di album" className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105" />
 												</a>
 											</div>
 										))}

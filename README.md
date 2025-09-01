@@ -1,12 +1,30 @@
-# React + Vite
+# Frontend - Website MTs Al-Jihad Medan
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ini adalah frontend untuk website Sistem Informasi Sekolah MTs Al-Jihad Medan. Dibangun menggunakan React (Vite) dan mengonsumsi data dari backend API terpisah.
 
-Currently, two official plugins are available:
+## Teknologi yang Digunakan
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React**: Library JavaScript untuk membangun antarmuka pengguna.
+- **Vite**: Alat build modern untuk pengembangan frontend yang cepat.
+- **Tailwind CSS**: Framework CSS untuk styling.
+- **React Router DOM**: Untuk navigasi dan routing halaman (Single-Page Application).
+- **Axios**: Untuk melakukan permintaan HTTP ke backend API.
+- **React Helmet Async**: Untuk mengelola title dan meta tag di setiap halaman.
+- **React Context API**: Untuk manajemen state global (status login).
 
-## Expanding the ESLint configuration
+## Fitur
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Tampilan publik yang sepenuhnya dinamis (Beranda, Profil, Berita, Galeri, dll).
+- Dasbor admin yang dilindungi dengan sistem login.
+- Fungsionalitas CRUD di sisi admin untuk mengelola semua konten website.
+- Struktur berbasis komponen yang mudah dipelihara.
+
+## Setup & Instalasi Lokal
+
+1.  Clone repository ini.
+2.  Jalankan `npm install` untuk menginstal semua dependencies.
+3.  Buat file `.env.development` untuk development lokal dan `.env.production` untuk build produksi. Contoh:
+    - **`.env.development`**: `VITE_API_URL=http://localhost:5000`
+    - **`.env.production`**: `VITE_API_URL=https://mtsaljihadmedan.sch.id`
+4.  Jalankan server development dengan `npm run dev`.
+5.  Aplikasi akan berjalan di `http://localhost:5173`.

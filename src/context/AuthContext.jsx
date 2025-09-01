@@ -10,7 +10,6 @@ export const AuthProvider = ({ children }) => {
 	const navigate = useNavigate();
 
 	useEffect(() => {
-		// Cek localStorage saat aplikasi pertama kali dimuat
 		const storedUserInfo = localStorage.getItem('userInfo');
 		if (storedUserInfo) {
 			setUserInfo(JSON.parse(storedUserInfo));
@@ -18,30 +17,33 @@ export const AuthProvider = ({ children }) => {
 		setLoading(false);
 	}, []);
 
-	// Fungsi untuk login
 	const login = async (username, password) => {
 		try {
-			const { data } = await axios.post('http://localhost:5000/api/users/login', { username, password });
+			const { data } = await axios.post(`${import.meta.env.VITE_API_URL}/api/users/login`, { username, password });
 			setUserInfo(data);
 			localStorage.setItem('userInfo', JSON.stringify(data));
-			navigate('/admin'); // Arahkan ke dasbor admin setelah login
+			navigate('/admin');
 		} catch (error) {
 			console.error('Login gagal:', error);
-			throw new Error(error.response.data.message || 'Login Gagal');
+			if (error.response) {
+				throw new Error(error.response.data.message || 'Login Gagal');
+			} else {
+				throw new Error('Tidak dapat terhubung ke server.');
+			}
 		}
 	};
 
-	// Fungsi untuk logout
 	const logout = () => {
 		setUserInfo(null);
 		localStorage.removeItem('userInfo');
-		navigate('/login'); // Arahkan ke halaman login setelah logout
+		navigate('/login');
 	};
 
-	return <AuthContext.Provider value={{ userInfo, login, logout }}>{!loading && children}</AuthContext.Provider>;
+	const value = { userInfo, login, logout };
+
+	return <AuthContext.Provider value={value}>{!loading && children}</AuthContext.Provider>;
 };
 
-// Hook kustom untuk mempermudah penggunaan context
 export const useAuth = () => {
 	return useContext(AuthContext);
 };

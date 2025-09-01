@@ -8,7 +8,7 @@ function LihatPesan() {
 
 	useEffect(() => {
 		axios
-			.get('http://localhost:5000/api/pesan')
+			.get(`${import.meta.env.VITE_API_URL}/api/pesan`)
 			.then((res) => setPesanList(res.data))
 			.catch((err) => console.error(err))
 			.finally(() => setLoading(false));

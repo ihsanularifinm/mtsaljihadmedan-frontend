@@ -9,7 +9,7 @@ function LihatPendaftar() {
 	useEffect(() => {
 		const fetchPendaftar = async () => {
 			try {
-				const { data } = await axios.get('http://localhost:5000/api/pendaftar');
+				const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/api/pendaftar`);
 				setPendaftarList(data);
 			} catch (error) {
 				console.error('Gagal mengambil data pendaftar:', error);
