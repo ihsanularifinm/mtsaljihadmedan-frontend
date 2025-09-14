@@ -33,7 +33,7 @@ function Profil() {
 				<>
 					<section className="mb-16">
 						<div className="bg-white p-8 rounded-lg shadow-lg">
-							<h2 className="text-3xl font-bold text-amber-500 mb-4">Sejarah Singkat</h2>
+							<h2 className="text-3xl font-bold text-amber-500 mb-4">Sejarah Sekolah</h2>
 							<p className="text-gray-700 leading-relaxed whitespace-pre-line">{profilData.sejarah}</p>
 						</div>
 					</section>

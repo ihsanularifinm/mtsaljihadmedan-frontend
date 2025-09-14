@@ -2,7 +2,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import { Helmet } from 'react-helmet-async';
 
-function Pendaftaran() {
+function PendaftaranForm() {
 	// State untuk menampung data dari setiap input
 	const [formData, setFormData] = useState({
 		nama_lengkap: '',
@@ -109,4 +109,4 @@ function Pendaftaran() {
 		</main>
 	);
 }
-export default Pendaftaran;
+export default PendaftaranForm;

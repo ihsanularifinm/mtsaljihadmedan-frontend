@@ -12,7 +12,8 @@ import Berita from './pages/Berita';
 import DetailBerita from './pages/DetailBerita';
 import Galeri from './pages/Galeri';
 import Akademik from './pages/Akademik';
-import Pendaftaran from './pages/Pendaftaran';
+import PendaftaranForm from './pages/PendaftaranForm';
+import PendaftaranInfo from './pages/PendaftaranInfo';
 import Kontak from './pages/Kontak';
 import LoginPage from './pages/LoginPage';
 
@@ -39,7 +40,8 @@ function App() {
 				<Route path="berita/:id" element={<DetailBerita />} />
 				<Route path="galeri" element={<Galeri />} />
 				<Route path="akademik" element={<Akademik />} />
-				<Route path="pendaftaran" element={<Pendaftaran />} />
+				<Route path="pendaftaran" element={<PendaftaranInfo />} />
+				<Route path="pendaftaran/form" element={<PendaftaranForm />} />
 				<Route path="kontak" element={<Kontak />} />
 			</Route>
 
