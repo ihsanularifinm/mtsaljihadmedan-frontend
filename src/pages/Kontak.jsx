@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import axios from 'axios';
 import { Helmet } from 'react-helmet-async';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 function Kontak() {
 	const [formData, setFormData] = useState({
@@ -11,6 +12,8 @@ function Kontak() {
 	});
 	const [message, setMessage] = useState('');
 	const [error, setError] = useState('');
+	const [recaptchaToken, setRecaptchaToken] = useState(null);
+	const recaptchaRef = useRef(null);
 
 	const handleChange = (e) => {
 		setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -21,12 +24,16 @@ function Kontak() {
 		setMessage('Mengirim pesan...');
 		setError('');
 		try {
-			const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/pesan`, formData);
+			const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/pesan`, { ...formData, recaptchaToken });
 			setMessage(response.data.message);
 			setFormData({ nama_lengkap: '', email: '', subjek: '', isi_pesan: '' });
+			recaptchaRef.current.reset();
+			setRecaptchaToken(null);
 		} catch (err) {
 			setError(err.response?.data?.message || 'Gagal mengirim pesan.');
 			setMessage('');
+			recaptchaRef.current.reset();
+			setRecaptchaToken(null);
 		}
 	};
 
@@ -72,8 +79,10 @@ function Kontak() {
 					</div>
 					<div>
 						<h2 className="text-2xl font-bold text-amber-500 mb-4">Lokasi Kami</h2>
-						<div className="rounded-md overflow-hidden">
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.89061615962!2d98.70141817472096!3d3.623889149959149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x303131c9644f331b%3A0xe2121e42754668e2!2sMTs%20Al-Jihad%20Medan!5e0!3m2!1sen!2sid!4v1725120239537!5m2!1sen!2sid" className="w-full h-80 border-0" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+						<div class="rounded-md overflow-hidden">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1456.6402304512299!2d98.70600200591302!3d3.6231765810391785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3031331d39d65bad%3A0x33e398d0639d9ec5!2sMTs%20Al-Jihad%20Medan!5e1!3m2!1sid!2sid!4v1752911076849!5m2!1sid!2sid" class="w-full h-80 border-0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+								{' '}
+							</iframe>
 						</div>
 					</div>
 				</div>
@@ -104,10 +113,16 @@ function Kontak() {
 							</label>
 							<textarea name="isi_pesan" value={formData.isi_pesan} onChange={handleChange} rows="5" className="w-full p-2 border border-gray-300 rounded-md" required></textarea>
 						</div>
+						<ReCAPTCHA
+							ref={recaptchaRef}
+							sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+							onChange={(token) => setRecaptchaToken(token)}
+							onExpired={() => setRecaptchaToken(null)} // Tambahan: handle jika token kadaluarsa
+						/>
 						{message && <div className="p-3 bg-green-100 text-green-800 rounded-md text-sm">{message}</div>}
 						{error && <div className="p-3 bg-red-100 text-red-800 rounded-md text-sm">{error}</div>}
 						<div>
-							<button type="submit" className="w-full bg-amber-500 text-white font-bold py-3 px-4 rounded-md hover:bg-amber-600 transition-colors duration-300 cursor-pointer">
+							<button type="submit" disabled={!recaptchaToken} className="w-full bg-amber-500 text-white font-bold py-3 px-4 rounded-md hover:bg-amber-600 transition-colors duration-300 cursor-pointer disabled:bg-gray-400 disabled:cursor-not-allowed">
 								Kirim Pesan
 							</button>
 						</div>
