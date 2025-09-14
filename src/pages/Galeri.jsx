@@ -48,6 +48,7 @@ function Galeri() {
 			<main className="container mx-auto px-6 py-12">
 				<Helmet>
 					<title>Galeri - MTs Al-Jihad Medan</title>
+					<meta name="description" content="Lihat dokumentasi foto dari berbagai kegiatan, acara, prestasi, dan fasilitas sekolah di MTs Al-Jihad Medan." />
 				</Helmet>
 
 				<h1 className="text-4xl font-bold text-center text-blue-800 mb-12">Galeri Foto Sekolah</h1>

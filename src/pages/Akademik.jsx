@@ -21,6 +21,7 @@ function Akademik() {
 		<main className="container mx-auto px-6 py-12">
 			<Helmet>
 				<title>Akademik - MTs Al-Jihad Medan</title>
+				<meta name="description" content="Informasi mengenai kurikulum, program unggulan, dan kegiatan ekstrakurikuler yang ditawarkan di MTs Al-Jihad Medan." />
 			</Helmet>
 			<h1 className="text-4xl font-bold text-center text-blue-800/94 mb-12">Informasi Akademik</h1>
 

@@ -7,7 +7,8 @@ function PendaftaranInfo() {
 	return (
 		<main className="container mx-auto px-6 py-12">
 			<Helmet>
-				<title>Pendaftaran - MTs Al-Jihad Medan</title>
+				<title>Pendaftaran Siswa Baru (PPDB) - MTs Al-Jihad Medan</title>
+				<meta name="description" content="Informasi lengkap mengenai alur, jadwal, dan syarat pendaftaran peserta didik baru (PPDB) di MTs Al-Jihad Medan untuk tahun ajaran mendatang." />
 			</Helmet>
 
 			<h1 className="text-4xl font-bold text-center text-blue-800 mb-12">Penerimaan Peserta Didik Baru (PPDB) TP. 2025/2026</h1>
@@ -94,13 +95,14 @@ function PendaftaranInfo() {
 			<section className="text-center">
 				<h2 className="text-2xl font-bold text-blue-800 mb-4">Siap Bergabung dengan Keluarga Besar MTs Al-Jihad?</h2>
 				<p className="text-gray-700 mb-6">Daftarkan putra/putri Anda sekarang juga melalui tautan di bawah ini atau hubungi kami untuk informasi lebih lanjut.</p>
-				{/* Tombol ini sekarang mengarah ke halaman formulir */}
-				<Link to="/pendaftaran/form" className="bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300">
-					Formulir Pendaftaran Online
-				</Link>
-				<Link to="/kontak" className="ml-4 text-blue-800 font-semibold">
-					Hubungi Panitia
-				</Link>
+				<div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+					<Link to="/pendaftaran/form" className="w-full sm:w-auto bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-8 rounded-full text-lg tsectionon duration-300">
+						Formulir Pendaftaran Online
+					</Link>
+					<Link to="/kontak" className="w-full sm:w-auto text-blue-800 font-semibold py-3 px-8 rounded-full border-2 border-blue-800 hover:bg-blue-800 hover:text-white transition duration-300">
+						Hubungi Panitia
+					</Link>
+				</div>
 			</section>
 		</main>
 	);

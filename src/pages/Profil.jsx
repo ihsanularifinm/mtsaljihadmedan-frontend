@@ -26,6 +26,7 @@ function Profil() {
 		<main className="container mx-auto px-6 py-12">
 			<Helmet>
 				<title>Profil Sekolah - MTs Al-Jihad Medan</title>
+				<meta name="description" content="Pelajari lebih lanjut tentang sejarah, visi, dan misi MTs Al-Jihad Medan. Komitmen kami dalam mencetak generasi cerdas dan berakhlak mulia." />
 			</Helmet>
 			<h1 className="text-4xl font-bold text-center text-blue-800/94 mb-12">Profil MTs Al-Jihad</h1>
 

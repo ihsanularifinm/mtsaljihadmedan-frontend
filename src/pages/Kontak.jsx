@@ -41,6 +41,7 @@ function Kontak() {
 		<main className="container mx-auto px-6 py-12">
 			<Helmet>
 				<title>Hubungi Kami - MTs Al-Jihad Medan</title>
+				<meta name="description" content="Hubungi MTs Al-Jihad Medan melalui telepon, email, atau kunjungi kami langsung. Temukan alamat dan lokasi kami di peta." />
 			</Helmet>
 			<h1 className="text-4xl font-bold text-center text-blue-800/94 mb-12">Hubungi Kami</h1>
 

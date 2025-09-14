@@ -33,7 +33,7 @@ function DetailBerita() {
 		<main className="container mx-auto px-6 py-12">
 			<Helmet>
 				<title>{`${berita.judul} - MTs Al-Jihad Medan`}</title>
-				<meta name="description" content={berita.isi.substring(0, 150)} />
+				<meta name="description" content={berita.isi.substring(0, 160)} />
 			</Helmet>
 
 			<article className="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">

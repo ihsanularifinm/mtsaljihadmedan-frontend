@@ -31,7 +31,7 @@ function Berita() {
 		<main className="container mx-auto px-6 py-12">
 			<Helmet>
 				<title>Berita - MTs Al-Jihad Medan</title>
-				<meta name="description" content="Kumpulan berita, pengumuman, dan informasi terbaru dari MTs Al-Jihad Medan." />
+				<meta name="description" content="Ikuti berita, pengumuman, dan informasi kegiatan terbaru dari MTs Al-Jihad Medan. Jangan lewatkan update dari prestasi siswa dan acara sekolah." />
 			</Helmet>
 
 			<h1 className="text-4xl font-bold text-center text-blue-800/92 mb-12">Berita & Informasi Sekolah</h1>
