@@ -56,7 +56,7 @@ function Pendaftaran() {
 			<Helmet>
 				<title>Pendaftaran Siswa Baru - MTs Al-Jihad Medan</title>
 			</Helmet>
-			<h1 className="text-4xl font-bold text-center text-primary mb-8">Formulir Pendaftaran Siswa Baru</h1>
+			<h1 className="text-4xl font-bold text-center text-blue-800/94 mb-8">Formulir Pendaftaran Siswa Baru</h1>
 
 			<div className="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
 				<form onSubmit={handleSubmit} className="space-y-6">
@@ -100,7 +100,7 @@ function Pendaftaran() {
 					{error && <div className="p-4 bg-red-100 text-red-800 rounded-md">{error}</div>}
 
 					<div>
-						<button type="submit" className="w-full btn-accent font-bold py-3 px-4 rounded-md">
+						<button type="submit" className="w-full bg-amber-500 text-white font-bold py-3 px-4 rounded-md hover:bg-amber-600 transition-colors duration-300 cursor-pointer">
 							Kirim Formulir Pendaftaran
 						</button>
 					</div>

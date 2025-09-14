@@ -43,7 +43,7 @@ function LoginPage() {
 							</label>
 							<input type="password" value={password} onChange={(e) => setPassword(e.target.value)} className="mt-1 block w-full p-2 border border-gray-300 rounded-md" required />
 						</div>
-						<button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+						<button type="submit" className="w-full bg-blue-600 hover:bg-blue-800/94 text-white font-bold py-2 px-4 rounded">
 							Masuk
 						</button>
 					</form>

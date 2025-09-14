@@ -48,14 +48,14 @@ function Galeri() {
 				<meta name="description" content="Dokumentasi foto kegiatan, fasilitas, dan prestasi siswa di MTs Al-Jihad Medan." />
 			</Helmet>
 
-			<h1 className="text-4xl font-bold text-center text-primary mb-12">Galeri Foto Sekolah</h1>
+			<h1 className="text-4xl font-bold text-center text-blue-800/94 mb-12">Galeri Foto Sekolah</h1>
 
 			{albums.length > 0 ? (
 				<>
 					<div className="mb-4 border-b border-gray-200">
 						<div className="-mb-px flex flex-wrap" id="tab-buttons">
 							{albums.map((album) => (
-								<button key={album._id} onClick={() => setActiveTab(album._id)} className={`px-4 py-2 font-semibold rounded-t-lg transition-colors duration-300 ${activeTab === album._id ? 'bg-primary text-white' : 'text-gray-600'}`}>
+								<button key={album._id} onClick={() => setActiveTab(album._id)} className={`px-4 py-2 font-semibold rounded-t-lg transition-colors duration-300 ${activeTab === album._id ? 'bg-blue-800/94 text-white' : 'text-gray-600'} cursor-pointer hover:bg-blue-800/20 hover:text-blue-800/94`}>
 									{album.nama_album}
 								</button>
 							))}

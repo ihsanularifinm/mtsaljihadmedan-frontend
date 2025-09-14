@@ -4,7 +4,7 @@ import { useAuth } from '../../context/AuthContext';
 function Sidebar() {
 	const { logout } = useAuth();
 	// Fungsi untuk styling link yang aktif
-	const navLinkClass = ({ isActive }) => (isActive ? 'flex items-center p-2 text-gray-900 rounded-lg bg-blue-100 text-blue-700' : 'flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100');
+	const navLinkClass = ({ isActive }) => (isActive ? 'flex items-center p-2 text-gray-900 rounded-lg bg-blue-100 text-blue-800/94' : 'flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100');
 
 	return (
 		<aside className="w-64 bg-white shadow-md h-screen sticky top-0">

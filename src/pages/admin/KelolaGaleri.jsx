@@ -34,7 +34,7 @@ function KelolaGaleri() {
 				<form onSubmit={handleTambahAlbum}>
 					<div className="flex items-center space-x-4">
 						<input type="text" value={namaAlbumBaru} onChange={(e) => setNamaAlbumBaru(e.target.value)} className="flex-1 px-3 py-2 border border-gray-300 rounded-md" placeholder="Nama Album Baru" required />
-						<button type="submit" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+						<button type="submit" className="bg-blue-600 hover:bg-blue-800/94 text-white font-bold py-2 px-4 rounded">
 							Buat Album
 						</button>
 					</div>

@@ -43,7 +43,7 @@ function KelolaBerita() {
 
 			<div className="flex justify-between items-center mb-6">
 				<h1 className="text-3xl font-bold text-gray-800">Kelola Berita</h1>
-				<Link to="/admin/berita/tambah" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+				<Link to="/admin/berita/tambah" className="bg-blue-600 hover:bg-blue-800/94 text-white font-bold py-2 px-4 rounded">
 					+ Tambah Berita Baru
 				</Link>
 			</div>
@@ -67,7 +67,7 @@ function KelolaBerita() {
 										<td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{berita.judul}</td>
 										<td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{new Date(berita.tanggal_terbit).toLocaleDateString('id-ID')}</td>
 										<td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-											<Link to={`/admin/berita/edit/${berita._id}`} className="text-indigo-600 hover:text-indigo-900">
+											<Link to={`/admin/berita/edit/${berita._id}`} className="text-blue-800/94 hover:text-indigo-900">
 												Edit
 											</Link>
 											<button onClick={() => handleDelete(berita._id)} className="text-red-600 hover:text-red-900 ml-4">

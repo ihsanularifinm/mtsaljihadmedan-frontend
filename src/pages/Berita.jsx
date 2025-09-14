@@ -34,7 +34,7 @@ function Berita() {
 				<meta name="description" content="Kumpulan berita, pengumuman, dan informasi terbaru dari MTs Al-Jihad Medan." />
 			</Helmet>
 
-			<h1 className="text-4xl font-bold text-center text-primary mb-12">Berita & Informasi Sekolah</h1>
+			<h1 className="text-4xl font-bold text-center text-blue-800/92 mb-12">Berita & Informasi Sekolah</h1>
 
 			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 				{beritaList.map((item) => (
@@ -42,9 +42,9 @@ function Berita() {
 						<img src={`/images/placeholder.jpg`} alt={item.judul} className="w-full h-48 object-cover" />
 						<div className="p-6 flex flex-col flex-grow">
 							<p className="text-sm text-gray-500">{new Date(item.tanggal_terbit).toLocaleDateString('id-ID')}</p>
-							<h3 className="font-bold text-lg mb-2 text-primary flex-grow mt-1">{item.judul}</h3>
+							<h3 className="font-bold text-lg mb-2 text-blue-800/92 flex-grow mt-1">{item.judul}</h3>
 							<p className="text-gray-700 mb-4 text-sm">{item.isi.substring(0, 100)}...</p>
-							<Link to={`/berita/${item._id}`} className="font-semibold text-accent hover:text-orange-700 mt-auto self-start">
+							<Link to={`/berita/${item._id}`} className="font-semibold text-amber-500 hover:text-amber-700 mt-auto self-start">
 								Baca Selengkapnya →
 							</Link>
 						</div>

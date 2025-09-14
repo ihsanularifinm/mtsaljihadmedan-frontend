@@ -6,15 +6,15 @@ function Header() {
 
 	const navLinkClass = ({ isActive }) =>
 		isActive
-			? 'text-blue-800 font-semibold' // Kelas untuk link aktif
-			: 'text-gray-600 hover:text-primary'; // Kelas untuk link tidak aktif
+			? 'text-blue-800/94 font-semibold' // Kelas untuk link aktif
+			: 'text-gray-600 hover:text-blue-800/94'; // Kelas untuk link tidak aktif
 
 	return (
 		<header className="bg-white shadow-md sticky top-0 z-50">
 			<nav className="container mx-auto px-6 py-2 flex justify-between items-center">
 				<Link to="/" className="flex items-center space-x-3">
 					<img src="/logo.png" className="h-10" alt="Logo MTs Al-Jihad" />
-					<span className="self-center text-xl font-semibold whitespace-nowrap text-primary">MTs Al-Jihad</span>
+					<span className="self-center text-xl font-semibold whitespace-nowrap text-blue-800/94">MTs Al-Jihad</span>
 				</Link>
 				<div className="hidden md:flex space-x-6 items-center">
 					<NavLink to="/" className={navLinkClass}>

@@ -27,13 +27,13 @@ function Profil() {
 			<Helmet>
 				<title>Profil Sekolah - MTs Al-Jihad Medan</title>
 			</Helmet>
-			<h1 className="text-4xl font-bold text-center text-primary mb-12">Profil MTs Al-Jihad</h1>
+			<h1 className="text-4xl font-bold text-center text-blue-800/94 mb-12">Profil MTs Al-Jihad</h1>
 
 			{profilData ? (
 				<>
 					<section className="mb-16">
 						<div className="bg-white p-8 rounded-lg shadow-lg">
-							<h2 className="text-3xl font-bold text-accent mb-4">Sejarah Singkat</h2>
+							<h2 className="text-3xl font-bold text-amber-500 mb-4">Sejarah Singkat</h2>
 							<p className="text-gray-700 leading-relaxed whitespace-pre-line">{profilData.sejarah}</p>
 						</div>
 					</section>
@@ -41,11 +41,11 @@ function Profil() {
 					<section className="mb-16">
 						<div className="flex flex-col md:flex-row gap-8">
 							<div className="md:w-1/2 bg-white p-8 rounded-lg shadow-lg">
-								<h3 className="text-2xl font-bold text-accent mb-4">Visi</h3>
+								<h3 className="text-2xl font-bold text-amber-500 mb-4">Visi</h3>
 								<p className="text-gray-700 whitespace-pre-line">{profilData.visi}</p>
 							</div>
 							<div className="md:w-1/2 bg-white p-8 rounded-lg shadow-lg">
-								<h3 className="text-2xl font-bold text-accent mb-4">Misi</h3>
+								<h3 className="text-2xl font-bold text-amber-500 mb-4">Misi</h3>
 								<div className="text-gray-700 whitespace-pre-line">{profilData.misi}</div>
 							</div>
 						</div>

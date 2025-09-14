@@ -15,8 +15,8 @@ function Hero() {
 			<div className="container mx-auto">
 				<h1 className="text-4xl md:text-5xl font-bold mb-4">Selamat Datang di MTs Al-Jihad Medan</h1>
 				<p className="text-lg md:text-xl mb-2">Anggota Subrayon MTsN 2 Medan</p>
-				<p className="font-semibold text-accent text-2xl mb-8">"Calon Pemilik Masa Depan - Seragam Ku Masa Depan Ku"</p>
-				<Link to="/pendaftaran" className="btn-accent font-bold py-3 w-full md:w-auto px-8 rounded-full text-lg text-center">
+				<p className="font-semibold text-amber-500 text-2xl mb-8">"Calon Pemilik Masa Depan - Seragam Ku Masa Depan Ku"</p>
+				<Link to="/pendaftaran" className="bg-amber-500 font-bold py-3 w-full md:w-auto px-8 rounded-full text-lg text-center hover:bg-amber-600 transition-colors duration-300">
 					Info Pendaftaran 2025/2026
 				</Link>
 			</div>

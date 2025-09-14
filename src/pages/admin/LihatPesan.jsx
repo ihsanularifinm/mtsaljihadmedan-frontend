@@ -47,7 +47,7 @@ function LihatPesan() {
 									</td>
 									<td className="px-6 py-4 whitespace-nowrap text-sm font-medium">{pesan.subjek}</td>
 									<td className="px-6 py-4 whitespace-nowrap">
-										<span className="px-2 text-xs font-semibold rounded-full bg-blue-100 text-blue-800">{pesan.status}</span>
+										<span className="px-2 text-xs font-semibold rounded-full bg-blue-100 text-blue-800/94">{pesan.status}</span>
 									</td>
 								</tr>
 							))

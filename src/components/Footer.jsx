@@ -1,6 +1,6 @@
 function Footer() {
 	return (
-		<footer className="bg-primary text-white pt-12 pb-8">
+		<footer className="bg-blue-800/94 text-white pt-12 pb-8">
 			<div className="container mx-auto px-6">
 				<div className="grid md:grid-cols-3 gap-8">
 					<div>
@@ -30,8 +30,24 @@ function Footer() {
 					</div>
 					<div>
 						<h4 className="text-lg font-bold mb-3">Hubungi Kami</h4>
-						<p className="text-gray-300 mb-2">Email: mtssaljihadmedan@gmail.com</p>
-						<p className="text-gray-300 mb-2">Instagram: @mtsaljihadmedan</p>
+						<p className="text-gray-300 mb-2">
+							Telepon:&nbsp;
+							<a href="tel:06144031004" className="hover:underline">
+								061 44031004
+							</a>
+						</p>
+						<p className="text-gray-300 mb-2">
+							Email:&nbsp;
+							<a href="mailto:mtssaljihadmedan@gmail.com" className="hover:underline">
+								mtssaljihadmedan@gmail.com
+							</a>
+						</p>
+						<p className="text-gray-300 mb-2">
+							Instagram:&nbsp;
+							<a href="https://www.instagram.com/mtsaljihadmedan" target="_blank" rel="noopener noreferrer" className="hover:underline">
+								@mtsaljihadmedan
+							</a>
+						</p>
 					</div>
 				</div>
 				<div className="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400 text-sm">

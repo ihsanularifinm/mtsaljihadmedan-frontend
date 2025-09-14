@@ -55,8 +55,8 @@ function KelolaAlbumDetail() {
 
 			<div className="bg-white p-6 rounded-lg shadow-md mb-8">
 				<form onSubmit={handleUpload}>
-					<input type="file" onChange={handleFileChange} multiple required className="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100 mb-4" />
-					<button type="submit" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+					<input type="file" onChange={handleFileChange} multiple required className="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-800/94 hover:file:bg-blue-100 mb-4" />
+					<button type="submit" className="bg-blue-600 hover:bg-blue-800/94 text-white font-bold py-2 px-4 rounded">
 						Upload Foto
 					</button>
 				</form>
