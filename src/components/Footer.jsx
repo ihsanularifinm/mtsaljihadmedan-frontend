@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 function Footer() {
 	return (
 		<footer className="bg-blue-800/94 text-white pt-12 pb-8">
@@ -10,21 +12,20 @@ function Footer() {
 					<div>
 						<h4 className="text-lg font-bold mb-3">Tautan Cepat</h4>
 						<ul className="space-y-2">
-							{/* Ganti <a> dengan <Link> nanti */}
 							<li>
-								<a href="/profil" className="text-gray-300 hover:text-white">
+								<Link href="/profil" className="text-gray-300 hover:text-white">
 									Profil Sekolah
-								</a>
+								</Link>
 							</li>
 							<li>
-								<a href="/akademik" className="text-gray-300 hover:text-white">
+								<Link href="/akademik" className="text-gray-300 hover:text-white">
 									Akademik
-								</a>
+								</Link>
 							</li>
 							<li>
-								<a href="/pendaftaran" className="text-gray-300 hover:text-white">
+								<Link href="/pendaftaran" className="text-gray-300 hover:text-white">
 									Pendaftaran
-								</a>
+								</Link>
 							</li>
 						</ul>
 					</div>

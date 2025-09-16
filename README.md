@@ -1,41 +1,36 @@
-# Frontend - Website MTs Al-Jihad Medan
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-Ini adalah frontend untuk website Sistem Informasi Sekolah MTs Al-Jihad Medan. Dibangun menggunakan React (Vite) dan mengonsumsi data dari backend API terpisah.
+## Getting Started
 
-## Teknologi yang Digunakan
+First, run the development server:
 
-- **React**: Library JavaScript untuk membangun antarmuka pengguna.
-- **Vite**: Alat build modern untuk pengembangan frontend yang cepat.
-- **Tailwind CSS v4**: Framework CSS untuk styling.
-- **React Router DOM**: Untuk navigasi dan routing halaman.
-- **Axios**: Untuk melakukan permintaan HTTP ke backend API.
-- **React Helmet Async**: Untuk mengelola title dan meta tag di setiap halaman.
-- **React Context API**: Untuk manajemen state global (status login).
-- **yet-another-react-lightbox**: Untuk fungsionalitas galeri foto.
-- **react-google-recaptcha**: Untuk menampilkan widget verifikasi reCAPTCHA.
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-## Fitur
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-- Tampilan publik yang sepenuhnya dinamis.
-- Dasbor admin yang dilindungi dengan sistem login.
-- Formulir Pendaftaran dan Kontak yang diamankan dengan reCAPTCHA.
-- Fungsionalitas CRUD di sisi admin untuk mengelola semua konten website.
-- Struktur berbasis komponen yang mudah dipelihara dan responsif.
+You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-## Setup & Instalasi Lokal
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-1.  Clone repository ini.
-2.  Jalankan `npm install` (atau `npm install --legacy-peer-deps`) untuk menginstal dependencies.
-3.  Buat file `.env.development` dan `.env.production`. Contoh:
-    - **`.env.development`**:
-      ```
-      VITE_API_URL=http://localhost:5000
-      VITE_RECAPTCHA_SITE_KEY=your_recaptcha_site_key_here
-      ```
-    - **`.env.production`**:
-      ```
-      VITE_API_URL=[https://mtsaljihadmedan.sch.id](https://mtsaljihadmedan.sch.id)
-      VITE_RECAPTCHA_SITE_KEY=your_recaptcha_site_key_here
-      ```
-4.  Jalankan server development dengan `npm run dev`.
-5.  Aplikasi akan berjalan di `http://localhost:5173`.
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
