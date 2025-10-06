@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Frontend - Website MTs Al-Jihad Medan (Next.js)
 
-## Getting Started
+Ini adalah frontend untuk website Sistem Informasi Sekolah MTs Al-Jihad Medan. Dibangun menggunakan [Next.js](https://nextjs.org/) (App Router) dan mengonsumsi data dari backend API terpisah.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Teknologi yang Digunakan
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **[Next.js](https://nextjs.org/)**: Framework React untuk produksi (dengan App Router, SSR, dll).
+- **[React](https://reactjs.org/)**: Library inti untuk membangun antarmuka pengguna.
+- **[Tailwind CSS](https://tailwindcss.com/)**: Framework CSS untuk styling.
+- **[Shadcn/ui](https://ui.shadcn.com/)**: Kumpulan komponen UI yang dibangun di atas Tailwind.
+- **[Tanstack (React) Query](https://tanstack.com/query/latest)**: Untuk manajemen data server state (data fetching, caching).
+- **[NextAuth.js](https://next-auth.js.org/)**: Untuk sistem otentikasi dan sesi.
+- **[Axios](https://axios-http.com/)**: Untuk melakukan permintaan HTTP ke backend API.
+- **[React Hook Form](https://react-hook-form.com/) & [Yup](https://github.com/jquense/yup)**: Untuk manajemen dan validasi formulir.
+- **[yet-another-react-lightbox](https://yet-another-react-lightbox.com/)**: Untuk fungsionalitas galeri foto.
+- **[react-google-recaptcha](https://github.com/dozoisch/react-google-recaptcha)**: Untuk widget verifikasi reCAPTCHA.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ✨ Fitur
 
-## Learn More
+- Arsitektur modern dengan **Server & Client Components**.
+- Halaman publik yang **SEO-friendly** berkat Server-Side Rendering.
+- Dasbor admin yang **aman dan responsif**.
+- Manajemen state data yang efisien dengan **Tanstack Query**.
+- Formulir publik yang aman dengan validasi **Yup** dan **reCAPTCHA**.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ Setup & Instalasi Lokal
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Untuk menjalankan proyek ini di lingkungan lokal Anda, ikuti langkah-langkah berikut:
 
-## Deploy on Vercel
+1.  **Clone repository ini:**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    ```bash
+    git clone [URL_REPOSITORY_ANDA]
+    cd [NAMA_FOLDER_PROYEK]
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2.  **Instal dependencies:**
+    Gunakan `npm` atau package manager lain pilihan Anda.
+
+    ```bash
+    npm install
+    ```
+
+3.  **Konfigurasi Environment Variables:**
+    Buat file `.env.local` di direktori utama. Salin konten dari `.env.example` dan isi dengan kredensial yang sesuai.
+
+    ```bash
+    cp .env.example .env.local
+    ```
+
+    _Selanjutnya, buka ` .env.local` dan edit nilainya._
+
+4.  **Jalankan server development:**
+
+    ```bash
+    npm run dev
+    ```
+
+5.  **Buka aplikasi:**
+    Aplikasi akan berjalan dan dapat diakses di [http://localhost:3000](http://localhost:3000).
